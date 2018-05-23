@@ -1,0 +1,43 @@
+﻿
+@using CvSitesiDeneme.Models;
+@model List<AboutMe>
+<section id="about" class="about-section section-padding">
+    <div class="container">
+        <h2 class="section-title wow fadeInUp">HAKKIMDA</h2>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 col-md-push-8">
+                    <div class="biography">
+                        <div class="myphoto">
+                            <img src="~/assets/images/myphoto.jpg" alt="">
+                        </div>
+
+
+                        <ul>
+                            <li><strong>Ad:</strong> @item.Name</li>
+                            <li><strong>Doğum Tarihi:</strong> @item.Date</li>
+                            <li><strong>Adres:</strong> @item.Address</li>
+                            <li><strong>Millet:</strong> @item.Nationality</li>
+                            <li><strong>Telefon:</strong> @item.Phone</li>
+                            <li><strong>Mail:</strong> @item.Mail</li>
+                        </ul>
+
+
+                    </div>
+                </div> <!-- col-md-4 -->
+                <div class="col-md-8 col-md-pull-4">
+                    <div class="short-info wow fadeInUp">
+                        <h3>Amacım</h3>
+                        <p>@item.Objective</p>
+                    </div>
+                    <div class="short-info wow fadeInUp">
+                        <h3>Ne Yaparım?</h3>
+                        <p>@item.WhatIDo</p>
+                       
+                    </div>
+                </div>
+            }
+        </div> <!-- /.row -->
+    </div> <!-- /.container -->
+</section>

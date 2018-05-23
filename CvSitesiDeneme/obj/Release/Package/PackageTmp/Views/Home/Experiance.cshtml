@@ -1,0 +1,61 @@
+﻿@using CvSitesiDeneme.Models;
+@model List<Experiance>
+<div class="col-md-12">
+    <div class="resume-title">
+        <h3>İŞ DENEYİMİ</h3>
+    </div>
+    <div class="resume">
+        <ul class="timeline">
+            @foreach (var item in Model)
+            {
+                if (item.ID % 2 == 0)
+                {
+                    <li class="timeline-inverted">
+                        <div class="posted-date">
+                            <span class="month">
+                                @item.StartDate
+                                @item.StopDate
+                            </span>
+                        </div><!-- /posted-date -->
+                        <div class="timeline-panel wow fadeInUp">
+                            <div class="timeline-content">
+                                <div class="timeline-heading">
+                                    <h3>@item.JobName</h3>
+                                    <span>@item.CompanyName, @item.Where</span>
+                                </div><!-- /timeline-heading -->
+                                <div class="timeline-body">
+                                    <p>@item.Explanation</p>
+                                </div><!-- /timeline-body -->
+                            </div> <!-- /timeline-content -->
+                        </div> <!-- /timeline-panel -->
+                    </li>
+                }
+                else
+                {
+                    <li>
+                        <div class="posted-date">
+                            <span class="month">
+                                @item.StartDate
+                                @item.StopDate
+                            </span>
+                        </div><!-- /posted-date -->
+                        <div class="timeline-panel wow fadeInUp">
+                            <div class="timeline-content">
+                                <div class="timeline-heading">
+                                    <h3>@item.JobName</h3>
+                                    <span>@item.CompanyName, @item.Where</span>
+                                </div><!-- /timeline-heading -->
+                                <div class="timeline-body">
+                                    <p>@item.Explanation</p>
+                                </div><!-- /timeline-body -->
+                            </div> <!-- /timeline-content -->
+                        </div> <!-- /timeline-panel -->
+                    </li>
+                }
+
+            }
+
+
+        </ul>
+    </div>
+</div>

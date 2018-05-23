@@ -1,0 +1,28 @@
+﻿@using CvSitesiDeneme.Models;
+@model List<Entery>
+<section id="home" class="tt-fullHeight" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+    @foreach (var item in Model)
+    {
+        
+        <div class="intro">
+            <div class="intro-sub">@item.Name</div>
+            <h1>@item.JobFirstName <span>@item.JobLastName</span></h1>
+            <p>
+                Lisans eğitimim boyunca kendimi Asp.net MVC alanında geliştirmeye çalıştım.<br />
+                Daha yolun başında olduğumu biliyorum ve heyecanlanıyorum.<br />
+                Bu okyanusu keşfetmek gerçekten güzel olucak..
+            </p>
+            <div class="social-icons">
+                <ul class="list-inline">
+                    <li><a href="https://www.facebook.com/enes.erdgn32"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/eneserdgn32"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/eneserdgn"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div> <!-- /.social-icons -->
+        </div>
+    }
+
+    <div class="mouse-icon">
+        <div class="wheel"></div>
+    </div>
+</section>

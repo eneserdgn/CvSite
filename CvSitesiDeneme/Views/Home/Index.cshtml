@@ -1,0 +1,79 @@
+﻿@using CvSitesiDeneme.Models;
+@model AllOf
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutCV.cshtml";
+}
+<!-- Home Section -->
+@Html.Partial("Entery", Model.Entery);
+<!-- End Home Section -->
+<!-- Navigation -->
+<header class="header">
+    <nav class="navbar navbar-custom" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="collapse navbar-collapse" id="custom-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home">ANA SAYFA</a></li>
+                    <li><a href="#about">HAKKIMDA</a></li>
+                    <li><a href="#resume">EĞİTİM</a></li>
+                    <li><a href="#skills">BECERİLER</a></li>
+                    <li><a href="#contact">İLETİŞİM</a></li>
+                </ul>
+            </div>
+        </div><!-- .container -->
+    </nav>
+</header>
+<!-- End Navigation -->
+<!-- About Section -->
+@Html.Partial("AboutMe", Model.Aboutme);
+<!-- End About Section -->
+<!-- Resume Section -->
+<section id="resume" class="resume-section section-padding">
+    <div class="container">
+        <h2 class="section-title wow fadeInUp">EĞİTİM</h2>
+        <div class="row">
+            @Html.Partial("Education", Model.Education);
+        </div><!-- /row -->
+        <div class="row">
+            @Html.Partial("Experiance", Model.Experiance);
+        </div><!-- /row -->
+        <br />
+        <br />
+        <div class="row">
+            @Html.Partial("Certificated", Model.Certificated);
+        </div><!-- /row -->
+    </div><!-- /.container -->
+</section>
+
+<!-- End Resume Section -->
+<!-- Skills Section -->
+@Html.Partial("Skill", Model.Skills);
+<!-- End Skills Section -->
+<!-- Contact Section -->
+@Html.Partial("Contact", Model.Contact);
+<!-- End Contact Section -->
+<!-- Footer Section -->
+<footer class="footer-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="copyright text-center">
+                    <p>&copy; Enes Erdoğan @DateTime.Now.Year</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><!-- End Footer Section -->
+<!-- Scroll-up -->
+<div class="scroll-up">
+    <a href="#home"><i class="fa fa-angle-up"></i></a>
+</div>
